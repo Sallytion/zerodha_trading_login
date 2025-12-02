@@ -168,6 +168,7 @@ async function clickIfExists(page, selectors) {
 
     const finalUrl = page.url();
     console.log('Final URL after login/OTP:', finalUrl);
+    console.log('Redirect URL:', finalUrl);
 
     console.log('Login completed successfully.');
 
