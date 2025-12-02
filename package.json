@@ -1,0 +1,14 @@
+{
+  "name": "kite-playwright-otp",
+  "version": "1.0.0",
+  "description": "Playwright script to log into Kite, fetch OTP via webhook, submit it, and POST final URL.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "playwright": "^1.36.0"
+  }
+}
