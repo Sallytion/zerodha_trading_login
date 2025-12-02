@@ -44,7 +44,8 @@ async function clickIfExists(page, selectors) {
 }
 
 (async () => {
-  const browser = await chromium.launch({ headless: false });
+  const isCI = process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true';
+  const browser = await chromium.launch({ headless: isCI });
   const page = await browser.newPage();
   try {
     console.log('Navigating to login page...');
