@@ -2,6 +2,8 @@ name: Run Zerodha Login
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"
 
 jobs:
   login:
