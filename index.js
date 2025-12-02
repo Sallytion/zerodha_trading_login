@@ -161,13 +161,12 @@ async function clickIfExists(page, selectors) {
     const targetBaseUrl = 'https://n8n.sallytion.qzz.io';
     
     // Wait until URL starts with the target base URL
-    await page.waitForURL(url => url.startsWith(targetBaseUrl), { timeout: 60000 });
+    await page.waitForURL(url => url.toString().startsWith(targetBaseUrl), { timeout: 60000 });
     
     // Wait for the page to load
     await page.waitForLoadState('networkidle');
 
     const finalUrl = page.url();
-    console.log('Final URL after login/OTP:', finalUrl);
     console.log('Redirect URL:', finalUrl);
 
     console.log('Login completed successfully.');
